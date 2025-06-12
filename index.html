@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Simple Website Builder</h1>
+      <div class="header-actions">
+        <button id="previewBtn" class="btn btn-secondary">Preview</button>
+        <button id="exportBtn" class="btn btn-primary">Export HTML</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Sidebar with Elements -->
+      <aside class="sidebar">
+        <h3>Elements</h3>
+        <div class="elements-container">
+          <div class="element-item" draggable="true" data-type="text">
+            <div class="element-icon">T</div>
+            <span>Text</span>
+          </div>
+          <div class="element-item" draggable="true" data-type="heading">
+            <div class="element-icon">H</div>
+            <span>Heading</span>
+          </div>
+          <div class="element-item" draggable="true" data-type="button">
+            <div class="element-icon">B</div>
+            <span>Button</span>
+          </div>
+          <div class="element-item" draggable="true" data-type="image">
+            <div class="element-icon">I</div>
+            <span>Image</span>
+          </div>
+          <div class="element-item" draggable="true" data-type="divider">
+            <div class="element-icon">—</div>
+            <span>Divider</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Canvas Area -->
+      <main class="canvas-container">
+        <div class="canvas-header">
+          <h3>Canvas</h3>
+          <button id="clearBtn" class="btn btn-danger">Clear All</button>
+        </div>
+        <div id="canvas" class="canvas">
+          <div class="canvas-placeholder">
+            <p>Drag elements here to build your website</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Properties Panel -->
+      <aside class="properties-panel">
+        <h3>Properties</h3>
+        <div id="propertiesForm" class="properties-form">
+          <p class="no-selection">Select an element to edit its properties</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Preview Modal -->
+  <div id="previewModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Preview</h3>
+        <button id="closePreview" class="close-btn">&times;</button>
+      </div>
+      <div id="previewContent" class="modal-body">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
