@@ -1,4 +1,3 @@
-// Website Builder Application
 class WebsiteBuilder {
     constructor() {
         this.canvas = document.getElementById('canvas');
